@@ -1,0 +1,88 @@
+.footer {
+    background-color: #2d3651;
+    text-align: center;
+    /*50px*/
+    /*padding-top: 3.125rem;*/
+    /*70px*/
+    /*padding-bottom: 4.375rem;*/
+    /*20px*/
+    /*padding-right: 1.25rem;*/
+    padding: 3.125rem 1.25rem 4.375rem;
+}
+
+.footer__label span:nth-of-type(1) {
+    letter-spacing: 0.33em;
+    font-weight: 100;
+    margin-right: -0.5em;
+}
+
+.footer__label span:nth-of-type(2) {
+    color: #e5e5e5;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+
+/*.social-icons {
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 0fr);
+    gap: 20px;
+}
+
+.social-icons a {
+    padding-left: 0;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    display: block;
+    width: 31.5px;
+    height: 36px;
+}
+
+.social-icons li a:hover {
+    background-color: #d66926;
+}*/
+
+.footer__socialmedia {
+    margin-bottom: 40px;
+    display: grid;
+    justify-content: center;
+    /*grid-template-columns: repeat(5, 50px);*/
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    position: relative;
+    letter-spacing: 0;
+}
+
+.footer__socialmedia a {
+    display: block;
+    padding: 10px;
+    transition: color 0.5s;
+}
+
+.footer__socialmedia a:hover {
+    color: #d66926;
+}
+
+.footer__socialmedia .fab {
+    font-size: 36px;
+}
+
+.footer__socialmedia::after {
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.1);
+    bottom: -20px;
+    left: calc(50% - 75px / 2);
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
