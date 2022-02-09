@@ -1,57 +1,51 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
+$local-gap: 13.333333333px;
 
-$local-gap: 13.333333333px; /* 4 * 10 / 3 */
+/* 4 * 10 / 3 */
 
 .skills {
-  @include sm-min {
-    padding: $gap-sm;
-  }
-
-  @include sm {
-    padding: $gap;
-  }
-
-  &__container {
-    display: grid;
-
-    @include lg-min {
-      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-      grid-template-columns: repeat(4, 1fr);
-      gap: $gap-sm;
-    }
-    @include lg-md {
-      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
-      grid-template-columns: repeat(3, 1fr);
-      gap: $gap-sm;
-    }
-    @include md-sm {
-      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
-      grid-template-columns: repeat(2, 1fr);
-      gap: $gap-sm;
+    @include sm-min {
+        padding: $gap-sm;
     }
     @include sm {
-      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
-      grid-template-columns: 1fr;
-      gap: $gap;
+        padding: $gap;
     }
-
-    @media (min-height: 691px) {
-      grid-auto-rows: calc(33.3333vh - #{$local-gap});
+    &__container {
+        display: grid;
+        @include lg-min {
+            grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+            grid-template-columns: repeat(4, 1fr);
+            gap: $gap-sm;
+        }
+        @include lg-md {
+            grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+            grid-template-columns: repeat(3, 1fr);
+            gap: $gap-sm;
+        }
+        @include md-sm {
+            grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+            grid-template-columns: repeat(2, 1fr);
+            gap: $gap-sm;
+        }
+        @include sm {
+            grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+            grid-template-columns: 1fr;
+            gap: $gap;
+        }
+        @media (min-height: 691px) {
+            grid-auto-rows: calc(33.3333vh - #{$local-gap});
+        }
+        @media (max-height: 690px) {
+            grid-auto-rows: calc(230px - #{$local-gap});
+        }
     }
-    @media (max-height: 690px) {
-      grid-auto-rows: calc(230px - #{$local-gap});
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: $gap;
+        @include sm-min {
+            margin-bottom: 30px;
+        }
     }
-  }
-
-  &__actions {
-    display: flex;
-    justify-content: center;
-
-    margin-top: $gap;
-    @include sm-min {
-      margin-bottom: 30px;
-    }
-  }
 }
-

@@ -1,10 +1,9 @@
 @use "../presets" as *;
 @use "mixins-media" as *;
 @use "mixins" as *;
-
 %container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding-right: $gap;
-  padding-left: $gap;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding-right: $gap;
+    padding-left: $gap;
 }
